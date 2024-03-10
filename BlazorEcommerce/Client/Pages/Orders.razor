@@ -2,7 +2,6 @@
 @inject IOrderService OrderService
 
 <h3>Orders</h3>
-
 @if (orders == null)
 {
     <span>Loading your orders...</span>
@@ -28,7 +27,6 @@ else
         </div>
     }
 }
-
 
 @code {
     List<OrderOverviewResponse> orders = null;

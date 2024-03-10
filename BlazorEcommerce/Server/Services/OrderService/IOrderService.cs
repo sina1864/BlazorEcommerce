@@ -1,9 +1,8 @@
-﻿namespace BlazorEcommerce.Server.Services.OrderService
+﻿namespace BlazorEcommerce.Server.Services.OrderService;
+
+public interface IOrderService
 {
-    public interface IOrderService
-    {
-        Task<ServiceResponse<bool>> PlaceOrder(int userId);
-        Task<ServiceResponse<List<OrderOverviewResponse>>> GetOrders();
-        Task<ServiceResponse<OrderDetailsResponse>> GetOrderDetails(int orderId);
-    }
+    Task<ServiceResponse<bool>> PlaceOrder(int userId);
+    Task<ServiceResponse<List<OrderOverviewResponse>>> GetOrders();
+    Task<ServiceResponse<OrderDetailsResponse>> GetOrderDetails(int orderId);
 }

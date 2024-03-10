@@ -54,7 +54,6 @@ else
             </button>
         </div>
     </div>
-
 }
 
 @code {
@@ -94,10 +93,10 @@ else
     {
         var productVariant = GetSelectedVariant();
         var cartItem = new CartItem
-            {
-                ProductId = productVariant.ProductId,
-                ProductTypeId = productVariant.ProductTypeId
-            };
+        {
+            ProductId = productVariant.ProductId,
+            ProductTypeId = productVariant.ProductTypeId
+        };
 
         await CartService.AddToCart(cartItem);
     }

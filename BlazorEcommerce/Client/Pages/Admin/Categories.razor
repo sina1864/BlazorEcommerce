@@ -4,14 +4,12 @@
 @implements IDisposable
 
 <h3>Categories</h3>
-
 <div class="header">
     <div class="col">Name</div>
     <div class="col">Url</div>
     <div class="col">Visible</div>
     <div class="col"></div>
 </div>
-
 @foreach (var category in CategoryService.AdminCategories)
 {
     @if (category.Editing)

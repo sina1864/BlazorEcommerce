@@ -4,7 +4,6 @@
 @attribute [Authorize(Roles = "Admin")]
 
 <h3>Product Types</h3>
-
 @foreach (var productType in ProductTypeService.ProductTypes)
 {
     @if (productType.Editing)

@@ -7,9 +7,7 @@
 @inject ICartService CartService
 
 <PageTitle>Login</PageTitle>
-
 <h3>Login</h3>
-
 <EditForm Model="user" OnValidSubmit="HandleLogin">
     <DataAnnotationsValidator />
     <div class="mb-3">
@@ -50,7 +48,6 @@
         if (result.Success)
         {
             errorMessage = string.Empty;
-
             await LocalStorage.SetItemAsync("authToken", result.Data);
             await AuthenticationStateProvider.GetAuthenticationStateAsync();
             await CartService.StoreCartItems(true);
